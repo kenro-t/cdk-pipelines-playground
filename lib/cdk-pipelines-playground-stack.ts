@@ -6,7 +6,7 @@ import {
   ShellStep,
 } from "aws-cdk-lib/pipelines";
 import * as sm from "aws-cdk-lib/aws-secretsmanager";
-import { MyAppStage } from "./my-app-stage";
+// import { MyAppStage } from "./my-app-stage";
 
 export class CdkPipelinesPlaygroundStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -24,17 +24,17 @@ export class CdkPipelinesPlaygroundStack extends cdk.Stack {
       pipelineName: "cdk-pipelines-playground-pipeline",
       synth: new ShellStep("Synth", {
         input: CodePipelineSource.gitHub(repo, branch, {
-          // authentication: githubToken.secretValueFromJson(
-          //   "cdk-pipelines-playground-token"
-          // ),
+          authentication: githubToken.secretValueFromJson(
+            "cdk-pipelines-playground-token"
+          ),
           // authentication: githubToken.secretValue,
-          authentication: cdk.SecretValue.secretsManager('cdk-pipelines-playground-token')
+          // authentication: cdk.SecretValue.secretsManager('cdk-pipelines-playground-token')
         }),
         commands: ["npm ci", "npm run build", "npx cdk synth"],
       }),
     });
 
-    const deploy = new MyAppStage(this, "Deploy");
-    const deployStage = pipeline.addStage(deploy);
+    // const deploy = new MyAppStage(this, "Deploy");
+    // const deployStage = pipeline.addStage(deploy);
   }
 }
