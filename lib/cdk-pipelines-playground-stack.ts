@@ -24,9 +24,10 @@ export class CdkPipelinesPlaygroundStack extends cdk.Stack {
       pipelineName: "cdk-pipelines-playground-pipeline",
       synth: new ShellStep("Synth", {
         input: CodePipelineSource.gitHub(repo, branch, {
-          authentication: githubToken.secretValueFromJson(
-            "cdk-pipelines-playground-token"
-          ),
+          // authentication: githubToken.secretValueFromJson(
+          //   "cdk-pipelines-playground-token"
+          // ),
+          authentication: githubToken.secretValue,
         }),
         commands: ["npm ci", "npm run build", "npx cdk synth"],
       }),
