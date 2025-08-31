@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
-import { CdkPiplelinesPlaygroundStack } from '../lib/cdk-piplelines-playground-stack';
+import { CdkPipelinesPlaygroundStack } from '../lib/cdk-pipelines-playground-stack';
 
 const app = new cdk.App();
-new CdkPiplelinesPlaygroundStack(app, 'CdkPiplelinesPlaygroundStack', {
+new CdkPipelinesPlaygroundStack(app, 'CdkPipelinesPlaygroundStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */

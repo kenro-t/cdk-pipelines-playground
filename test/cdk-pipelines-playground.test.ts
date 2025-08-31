@@ -1,13 +1,13 @@
 // import * as cdk from 'aws-cdk-lib';
 // import { Template } from 'aws-cdk-lib/assertions';
-// import * as CdkPiplelinesPlayground from '../lib/cdk-piplelines-playground-stack';
+// import * as CdkPiplelinesPlayground from '../lib/cdk-pipelines-playground-stack';
 
 // example test. To run these tests, uncomment this file along with the
-// example resource in lib/cdk-piplelines-playground-stack.ts
+// example resource in lib/cdk-pipelines-playground-stack.ts
 test('SQS Queue Created', () => {
 //   const app = new cdk.App();
 //     // WHEN
-//   const stack = new CdkPiplelinesPlayground.CdkPiplelinesPlaygroundStack(app, 'MyTestStack');
+//   const stack = new CdkPiplelinesPlayground.CdkPipelinesPlaygroundStack(app, 'MyTestStack');
 //     // THEN
 //   const template = Template.fromStack(stack);
 

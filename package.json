@@ -1,8 +1,8 @@
 {
-  "name": "cdk-piplelines-playground",
+  "name": "cdk-pipelines-playground",
   "version": "0.1.0",
   "bin": {
-    "cdk-piplelines-playground": "bin/cdk-piplelines-playground.js"
+    "cdk-pipelines-playground": "bin/cdk-pipelines-playground.js"
   },
   "scripts": {
     "build": "tsc",
