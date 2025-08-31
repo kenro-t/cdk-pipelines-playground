@@ -20,4 +20,4 @@ new CdkPipelinesPlaygroundStack(app, 'CdkPipelinesPlaygroundStack', {
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
 
-new S3Stack(app, 'S3Stack', {});
+// new S3Stack(app, 'S3Stack', {});
