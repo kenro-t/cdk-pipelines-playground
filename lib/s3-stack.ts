@@ -11,5 +11,11 @@ export class S3Stack extends cdk.Stack {
       removalPolicy: cdk.RemovalPolicy.DESTROY, 
       autoDeleteObjects: true,
     });
+
+    const bucket2 = new s3.Bucket(this, "TestBucket2", {
+      versioned: true,
+      removalPolicy: cdk.RemovalPolicy.DESTROY, 
+      autoDeleteObjects: true,
+    });
   }
 }
