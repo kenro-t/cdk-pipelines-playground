@@ -8,5 +8,6 @@ export class MyAppStage extends cdk.Stage {
     super(scope, id, props);
 
     new S3Stack(this, "S3Stack");
+    
   }
 }
