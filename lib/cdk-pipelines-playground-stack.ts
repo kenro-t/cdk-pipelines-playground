@@ -27,7 +27,8 @@ export class CdkPipelinesPlaygroundStack extends cdk.Stack {
           // authentication: githubToken.secretValueFromJson(
           //   "cdk-pipelines-playground-token"
           // ),
-          authentication: githubToken.secretValue,
+          // authentication: githubToken.secretValue,
+          authentication: cdk.SecretValue.secretsManager('cdk-pipelines-playground-token')
         }),
         commands: ["npm ci", "npm run build", "npx cdk synth"],
       }),
