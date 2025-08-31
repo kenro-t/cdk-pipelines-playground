@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
 import { CdkPipelinesPlaygroundStack } from '../lib/cdk-pipelines-playground-stack';
+import { S3Stack } from '../lib/s3-stack';
 
 const app = new cdk.App();
 new CdkPipelinesPlaygroundStack(app, 'CdkPipelinesPlaygroundStack', {
@@ -18,3 +19,5 @@ new CdkPipelinesPlaygroundStack(app, 'CdkPipelinesPlaygroundStack', {
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
+
+new S3Stack(app, 'S3Stack', {});
